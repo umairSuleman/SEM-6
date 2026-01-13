@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Share Your Travels</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(#6d78c6, #d9d9f3);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background: repeating-linear-gradient(
+                45deg,
+                #0b1d3a,
+                #0b1d3a 10px,
+                #1f3c88 10px,
+                #1f3c88 20px
+            );
+            color: white;
+            padding: 15px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: sans-serif, cursive;
+        }
+
+        /* Section title */
+        .section-title {
+            color: white;
+            font-size: 20px;
+            margin: 25px 40px;
+            font-family: sans-serif, cursive;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+
+        .card {
+            background: #ffffff;
+            width: 280px;
+            padding: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        .card video,
+        .card img {
+            width: 100%;
+            height: 160px;
+            background: black;
+        }
+
+        .caption {
+            font-size: 13px;
+            color: #555;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        Share Your Travels
+    </header>
+
+    <!-- Section -->
+    <div class="section-title">
+        HTML5 Video
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+
+        <div class="card">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                Louvre Museum, Paris, France
+            </div>
+        </div>
+
+        <div class="card">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                Sea View at Sunset
+            </div>
+        </div>
+
+        <div class="card">
+            <video controls>
+                <source src="video3.mp4" type="video/mp4">
+            </video>
+            <div class="caption">
+                Riverside Landscape
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

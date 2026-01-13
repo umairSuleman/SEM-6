@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Population Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 30px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            width: 600px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        th, td {
+            border: 2px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .country {
+            background-color: #ffe6a1;
+            font-weight: bold;
+            width: 150px;
+        }
+
+        .year {
+            background-color: #a9c2e6;
+            width: 200px;
+        }
+
+        .population {
+            background-color: #b7d7a8;
+            width: 200px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>Country</th>
+            <th colspan="2">Population (in Crores)</th>
+        </tr>
+
+        <!-- INDIA -->
+        <tr>
+            <td class="country" rowspan="3">INDIA</td>
+            <td class="year">1998</td>
+            <td class="population">85</td>
+        </tr>
+        <tr>
+            <td class="year">1999</td>
+            <td class="population">90</td>
+        </tr>
+        <tr>
+            <td class="year">2000</td>
+            <td class="population">100</td>
+        </tr>
+
+        <!-- USA -->
+        <tr>
+            <td class="country" rowspan="3">USA</td>
+            <td class="year">1998</td>
+            <td class="population">30</td>
+        </tr>
+        <tr>
+            <td class="year">1999</td>
+            <td class="population">35</td>
+        </tr>
+        <tr>
+            <td class="year">2000</td>
+            <td class="population">40</td>
+        </tr>
+
+        <!-- UK -->
+        <tr>
+            <td class="country" rowspan="3">UK</td>
+            <td class="year">1998</td>
+            <td class="population">25</td>
+        </tr>
+        <tr>
+            <td class="year">1999</td>
+            <td class="population">30</td>
+        </tr>
+        <tr>
+            <td class="year">2000</td>
+            <td class="population">35</td>
+        </tr>
+    </table>
+
+</body>
+</html>

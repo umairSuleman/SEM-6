@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Population Table (JavaScript)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 30px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            width: 600px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: red;
+            font-weight: bold;
+        }
+
+        .country {
+            background-color: #ffe6a1;
+            font-weight: bold;
+        }
+
+        .year {
+            background-color: #a9c2e6;
+        }
+
+        .population {
+            background-color: #b7d7a8;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<table id="populationTable">
+    <thead>
+        <tr>
+            <th>Country</th>
+            <th colspan="2">Population (in Crores)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Rows will be inserted here by JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    // 1️⃣ Array of JavaScript objects
+    const populationData = [
+        { country: "INDIA", year: 1998, population: 85 },
+        { country: "INDIA", year: 1999, population: 90 },
+        { country: "INDIA", year: 2000, population: 100 },
+
+        { country: "USA", year: 1998, population: 30 },
+        { country: "USA", year: 1999, population: 35 },
+        { country: "USA", year: 2000, population: 40 },
+
+        { country: "UK", year: 1998, population: 25 },
+        { country: "UK", year: 1999, population: 30 },
+        { country: "UK", year: 2000, population: 35 }
+    ];
+
+    const tableBody = document.querySelector("#populationTable tbody");
+
+    let previousCountry = "";
+
+    // 2️⃣ Create table rows dynamically
+    populationData.forEach((item, index) => {
+        const row = document.createElement("tr");
+
+        // Add country cell only once per group (rowspan logic)
+        if (item.country !== previousCountry) {
+            const countryCell = document.createElement("td");
+            countryCell.textContent = item.country;
+            countryCell.className = "country";
+            countryCell.rowSpan = 3;
+            row.appendChild(countryCell);
+            previousCountry = item.country;
+        }
+
+        const yearCell = document.createElement("td");
+        yearCell.textContent = item.year;
+        yearCell.className = "year";
+
+        const popCell = document.createElement("td");
+        popCell.textContent = item.population;
+        popCell.className = "population";
+
+        row.appendChild(yearCell);
+        row.appendChild(popCell);
+
+        tableBody.appendChild(row);
+    });
+</script>
+
+</body>
+</html>
